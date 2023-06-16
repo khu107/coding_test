@@ -10,20 +10,26 @@
 // 4	3	[4,8,12]
 // -4	2	[-4, -8]
 
-function solution(x, n) {
-  var answer = [];
-  let add = x;
-  for (let i = 0; i < n; i++) {
-    answer.push(x);
-    x += add;
-  }
+// function solution(x, n) {
+//   var answer = [];
+//   let add = x;
+//   for (let i = 0; i < n; i++) {
+//     answer.push(x);
+//     x += add;
+//   }
+//   return answer;
+// }
+// console.log(solution(2, 5));
+
+// function solution(s) {
+//   var answer = true;
+//   return answer;
+// }
+
+function solution(s) {
+  var answer = (s.length === 4 || s.length === 6) && parseInt(s) ? true : false;
   return answer;
 }
-solution(2, 5);
-console.log(solution(2, 5));
-// let n = 5;
-// let answer = [];
-// for (let i = 1; i < n + 1; i++) {
-//   answer.push(i);
-// }
-// console.log(answer);
+
+console.log(solution('a234'));
+console.log(solution('1234'));

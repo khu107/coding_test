@@ -22,14 +22,14 @@
 // 입출력 예 #3
 // 626331은 500번을 시도해도 1이 되지 못하므로 -1을 리턴해야 합니다.
 
-let n = 16;
-
-let cnt = 0;
-
-for (let i = 1; i < n + 1; i++) {
-  if (i % 2 === 0) {
-    n += n / 2;
-    cnt++;
+function solution(num) {
+  for (let cnt = 0; cnt <= 500; cnt++) {
+    if (num === 1) return cnt;
+    else if (num % 2 === 0) num = num / 2;
+    else num = num * 3 + 1;
   }
+  return -1;
 }
-console.log(cnt);
+console.log(solution(6));
+console.log(solution(16));
+console.log(solution(626331));
